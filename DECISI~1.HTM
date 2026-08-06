@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>决策中心 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">决策中心 Decision Center</h1>
+  <p class="section-sub">打开网站的第一件事，不是看行情，而是看清楚：今天该研究谁、哪些公司值得优先关注、哪些需要谨慎。</p>
+  <div class="disclaimer">
+    <b>诚实说明：</b>本页所有排序都是对当前静态示例数据的实时计算（距离进入更优区间、评分薄弱项等），
+    <b>不包含"较昨日变化"的真实历史对比</b>——V2 暂时没有接入真实历史数据，不会编造"评分从89变成91"这类没有依据的变化。等接入真实数据源后，这里会升级为真正的每日增量播报。
+  </div>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <h3>🎯 最接近进入更优区间</h3>
+    <p class="section-sub">按「市值需要下跌多少百分比，才能进入下一个更便宜的锚定区间」升序排列——越接近0%，代表越值得马上研究。</p>
+    <div id="closestZone"></div>
+  </div>
+
+  <div class="panel">
+    <h3>✅ 已经处于安全区 / 极佳机会</h3>
+    <p class="section-sub">当前市值已经低于合理锚，具备一定安全边际的公司，按安全边际从高到低排列。</p>
+    <div id="goodZone"></div>
+  </div>
+
+  <div class="panel">
+    <h3>⚠️ 当前偏贵 / 泡沫区，需要谨慎</h3>
+    <p class="section-sub">当前市值已经超过乐观锚，估值隐含了很强的远期假设，追高前请先看清楚锚定依据。</p>
+    <div id="riskZone"></div>
+  </div>
+
+  <div class="panel">
+    <h3>🔍 各公司最薄弱的评分项</h3>
+    <p class="section-sub">评分体系里最低分的一项，往往就是最值得警惕的风险点。</p>
+    <div id="weakScores"></div>
+  </div>
+
+  <div class="panel">
+    <h3>🗺️ 决策中心 Roadmap</h3>
+    <p class="section-sub">以下是产品经理（ChatGPT）规划、但本版本尚未实现的功能，如实列出，避免"看起来做了但其实没做"：</p>
+    <div class="taglist">
+      <span class="tag risk">事件驱动（新闻自动串联产业链影响）——未实现</span>
+      <span class="tag risk">决策日志（记录你自己的买卖决策与理由）——未实现</span>
+      <span class="tag risk">AI问答（直接提问"为什么值X亿"）——未实现</span>
+      <span class="tag risk">真实历史数据 / 每日自动增量——未实现，依赖接入真实数据源</span>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-decision.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>产业地图 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .tree { display: flex; flex-direction: column; gap: 24px; }
+  .tree-group { }
+  .tree-group-title {
+    font-size: 17px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap:8px;
+  }
+  .tree-group-title .line { flex:1; height:1px; background: var(--border); }
+  .tree-sub { margin-left: 8px; border-left: 2px solid var(--border); padding-left: 18px; margin-bottom: 18px; }
+  .tree-sub-title { font-size: 14px; font-weight: 600; color: var(--text-dim); margin-bottom: 8px; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+  .tree-sub-title .peers { font-size: 12px; color: var(--text-faint); font-weight: 400; }
+  .tree-companies { display:flex; flex-wrap:wrap; gap: 10px; }
+  .tree-company {
+    display:flex; flex-direction:column; gap:4px; min-width: 160px;
+    background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px;
+    border-left: 3px solid var(--zone-color, var(--zone-unknown));
+  }
+  .tree-company .name { font-weight: 600; font-size: 13.5px; }
+  .tree-company .meta { font-size: 11.5px; color: var(--text-faint); }
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">产业地图 Industry Map</h1>
+  <p class="section-sub">不是罗列公司，而是先建立知识结构：一条赛道里，谁是全球对标、谁是中国对应标的，一眼看清楚"中国做到国外的百分之多少了"。</p>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <div class="tree" id="industryTree"></div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-industry.js"></script>
+</body>
+</html>

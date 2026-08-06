@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>计算器 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">估值中心 Valuation Center</h1>
+  <p class="section-sub">这里不是给你一个数字，而是给你完整的推导过程：选一家公司，看清楚它的合理市值是怎么算出来的、每一步假设是什么。</p>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <h3>🔎 估值解释器</h3>
+    <p class="section-sub">选择一家公司，直接看到它「合理锚」的完整推导链路，而不是一个孤立的结果。</p>
+    <div class="field" style="max-width:360px;">
+      <label>选择公司</label>
+      <select id="explainerSelect"><option value="">— 请选择 —</option></select>
+    </div>
+    <div id="explainerBox"></div>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="calc-grid">
+    <div class="panel">
+      <h3>💰 市值计算器</h3>
+      <p class="section-sub">公式：当前市值 = 股价 × 总股本</p>
+      <div class="field">
+        <label>选择公司（可选，自动带入数据）</label>
+        <select id="mcCompanySelect"><option value="">— 手动输入 —</option></select>
+      </div>
+      <div class="field"><label>股价（元）</label><input class="input" type="number" id="mcPrice" step="0.01" /></div>
+      <div class="field"><label>总股本（亿股）</label><input class="input" type="number" id="mcShares" step="0.01" /></div>
+      <div class="result-box">当前市值 ≈ <b id="mcResult">—</b></div>
+    </div>
+
+    <div class="panel">
+      <h3>🧮 估值计算器</h3>
+      <p class="section-sub">公式：基准合理市值 = 未来净利润 × 合理PE；可再乘以调整系数得到最终合理锚。</p>
+      <div class="field">
+        <label>选择公司（可选，自动带入数据）</label>
+        <select id="vcCompanySelect"><option value="">— 手动输入 —</option></select>
+      </div>
+      <div class="field"><label>未来预测净利润（亿元）</label><input class="input" type="number" id="vcProfit" step="0.1" /></div>
+      <div class="field"><label>合理 PE（倍）</label><input class="input" type="number" id="vcPE" step="0.5" /></div>
+      <div class="field"><label>调整系数（稀缺性/周期修正，默认1.0）</label><input class="input" type="number" id="vcFactor" step="0.01" value="1.0" /></div>
+      <div class="result-box">基准合理市值 ≈ <b id="vcBase">—</b><br/>调整后合理市值 ≈ <b id="vcFinal">—</b></div>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-calculators.js"></script>
+</body>
+</html>

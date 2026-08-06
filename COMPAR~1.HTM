@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>公司对比 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">公司对比 Compare</h1>
+  <p class="section-sub">选 2~3 家公司并排比较，不用来回切换详情页。</p>
+  <div class="toolbar">
+    <select id="cmpA"></select>
+    <select id="cmpB"></select>
+    <select id="cmpC"><option value="">— 不选择第三家 —</option></select>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <div style="overflow-x:auto;">
+      <table class="compare-table" id="compareTable"></table>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-compare.js"></script>
+</body>
+</html>

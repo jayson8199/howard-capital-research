@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>决策工作台 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .ws-watch-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 0; border-bottom:1px solid var(--border); }
+  .ws-watch-row:last-child { border-bottom:none; }
+  .thesis-card { border:1px solid var(--border); border-radius: 10px; margin-bottom:10px; }
+  .thesis-card summary { cursor:pointer; padding:12px 14px; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+  .thesis-card summary::-webkit-details-marker { display:none; }
+  .thesis-item { display:flex; align-items:center; gap:10px; padding:8px 14px; border-top:1px solid var(--border); font-size:13px; }
+  .thesis-item .txt { flex:1; }
+  .thesis-item select { font-size:12px; padding:4px 8px; }
+  .status-confirmed { color: var(--accent); }
+  .status-strengthened { color: var(--zone-optimistic); }
+  .status-weakened { color: var(--danger); }
+  .status-pending { color: var(--text-faint); }
+  .log-form { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:10px; align-items:end; margin-bottom:16px; }
+  .log-form .field { margin-bottom:0; }
+  .stat-row { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:16px; }
+  .stat-box { background: var(--bg-elevated); border:1px solid var(--border); border-radius:10px; padding:10px 18px; text-align:center; }
+  .stat-box b { display:block; font-size:22px; color: var(--accent); }
+  .stat-box span { font-size:11.5px; color: var(--text-faint); }
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">决策工作台 Decision Workspace</h1>
+  <p class="section-sub">这三块内容全部保存在你当前浏览器的本地存储（localStorage）里，不会上传到任何服务器，换设备或清除浏览器数据会丢失，请自行注意备份。</p>
+  <div class="disclaimer">
+    这是"研究系统"和"决策系统"的分界线：观察池帮你盯住等待中的机会，Thesis Tracker帮你跟踪投资逻辑是否兑现，决策日志帮你沉淀"为什么买、为什么卖"，半年后回头看真正判断自己决策质量的高低，而不是只看收益率。
+  </div>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <h3>⭐ 观察池 Watchlist</h3>
+    <p class="section-sub">把你正在等待"进入更优区间"的公司加进来，随时看它还差多少。</p>
+    <div class="toolbar">
+      <select id="watchSelect" style="flex:1; min-width:220px;"></select>
+      <button class="btn" id="watchAddBtn">加入观察池</button>
+    </div>
+    <div id="watchList"></div>
+  </div>
+
+  <div class="panel">
+    <h3>📒 研究笔记 Notebook</h3>
+    <p class="section-sub">给每家公司写自由格式的笔记，比如"我认为最大风险是HBM验证"，保存在本地浏览器里。</p>
+    <div class="toolbar">
+      <select id="noteSelect" style="flex:1; min-width:220px;"></select>
+    </div>
+    <div class="note-box">
+      <textarea id="noteText" placeholder="写点什么…"></textarea>
+      <div style="margin-top:8px;"><button class="btn" id="noteSaveBtn">保存笔记</button> <span id="noteSavedHint" style="color:var(--text-faint); font-size:12px;"></span></div>
+    </div>
+    <div id="noteList" style="margin-top:16px;"></div>
+  </div>
+
+  <div class="panel">
+    <h3>🎯 Investment Thesis Tracker</h3>
+    <p class="section-sub">每家公司只保留几条核心投资逻辑。点开公司，标记每一条逻辑当前是"待验证 / 已成立 / 正在加强 / 正在削弱"——这才是真正的投资研究，而不是盯着财报数字。</p>
+    <div id="thesisList"></div>
+  </div>
+
+  <div class="panel">
+    <h3>📓 决策日志 Decision Log</h3>
+    <p class="section-sub">记录你自己的每一次买卖决策和理由，以后可以回来标记复盘结果，统计的是「决策质量」，不是收益率。</p>
+    <div class="stat-row" id="logStats"></div>
+    <div class="log-form">
+      <div class="field"><label>日期</label><input class="input" type="date" id="logDate" /></div>
+      <div class="field"><label>公司</label><select id="logCompany"></select></div>
+      <div class="field"><label>操作</label>
+        <select id="logAction">
+          <option>买入</option><option>加仓</option><option>减仓</option><option>卖出</option><option>观望</option>
+        </select>
+      </div>
+      <div class="field"><label>信心（1-5）</label>
+        <select id="logConfidence"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select>
+      </div>
+      <div class="field" style="grid-column: 1 / -1;"><label>原因</label><input class="input" type="text" id="logReason" placeholder="例如：进入安全区、HBM验证通过…" /></div>
+      <div class="field"><button class="btn" id="logAddBtn">记录决策</button></div>
+    </div>
+    <div id="logList"></div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-workspace.js"></script>
+</body>
+</html>

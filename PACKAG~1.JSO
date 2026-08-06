@@ -1,0 +1,9 @@
+{
+  "name": "howard-capital-research",
+  "private": true,
+  "version": "4.2.0",
+  "description": "Howard Capital Research — 中国科技核心资产估值决策系统（零依赖静态站点 + Netlify Functions 自动行情刷新）",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}

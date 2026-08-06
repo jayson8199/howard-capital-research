@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Howard Capital Research · 首页</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">中国科技核心资产 · 估值地图</h1>
+  <p class="section-sub">首页展示当前纳入研究池的科技龙头公司，颜色代表估值锚定系统自动判断的区间：绿色=安全/极佳机会，黄色=合理，橙红=乐观/偏贵。</p>
+
+  <div class="disclaimer">
+    <b>市场事实</b> 与 <b>研究模型</b> 是两回事：卡片上的"当前市值/PE"来自行情快照（现场用 股价 × 总股本 计算），"安全边际/评分"是本站基于未来利润预测的主观研究判断，不是实时行情，请勿混淆。
+  </div>
+</div>
+
+<div class="container section">
+  <div class="toolbar">
+    <input class="input" id="searchInput" placeholder="搜索公司名称或股票代码…" />
+    <select id="sortSelect">
+      <option value="marketCapDesc">按市值：从高到低</option>
+      <option value="marketCapAsc">按市值：从低到高</option>
+      <option value="marginDesc">按安全边际：从高到低</option>
+      <option value="scoreDesc">按综合评分：从高到低</option>
+      <option value="peAsc">按PE：从低到高</option>
+    </select>
+  </div>
+  <div class="chip-row" id="industryChips"></div>
+  <div class="chip-row" style="margin-top:8px;">
+    <span class="chip" id="favOnlyChip">⭐ 只看收藏</span>
+  </div>
+</div>
+
+<div class="container section">
+  <h2 class="section-title">公司卡片</h2>
+  <div class="grid" id="companyGrid"></div>
+</div>
+
+<div class="container section">
+  <h2 class="section-title">估值地图</h2>
+  <p class="section-sub">每一行表示一家公司当前市值在「极佳机会 → 安全 → 合理 → 乐观 → 泡沫」五级锚定区间中的位置。</p>
+  <div class="panel">
+    <div class="valuemap" id="valueMap"></div>
+    <div class="anchor-labels" style="margin-top:14px;">
+      <span>极佳机会</span><span>安全区</span><span>合理区</span><span>乐观区</span><span>泡沫区</span>
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-home.js"></script>
+</body>
+</html>

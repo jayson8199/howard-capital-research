@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>全球科技地图 · Howard Capital Research</title>
+<link rel="stylesheet" href="assets/style.css" />
+<style>
+  .gmap { display: flex; flex-direction: column; gap: 6px; }
+  .gmap-countries { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 800px) { .gmap-countries { grid-template-columns: 1fr; } }
+  .gmap-country { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; }
+  .gmap-country h4 { margin: 0 0 12px; font-size: 14.5px; color: var(--text-dim); display:flex; align-items:center; gap:8px; }
+  .gmap-chip {
+    display:flex; justify-content:space-between; gap:8px; width:100%; text-align:left;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; margin-bottom: 8px; cursor: pointer; font-size: 13px; color: var(--text);
+  }
+  .gmap-chip:hover { border-color: var(--accent-2); }
+  .gmap-chip .seg { color: var(--text-faint); font-size: 11.5px; }
+  .gmap-flow { text-align:center; font-size: 24px; color: var(--text-faint); margin: 4px 0; }
+  .gmap-flow small { display:block; font-size: 12px; color: var(--text-faint); }
+  .gmap-china { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; }
+  .gmap-china-card {
+    border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: var(--bg-elevated);
+    border-left: 3px solid var(--zone-color, var(--zone-unknown)); transition: box-shadow .25s ease, transform .25s ease;
+  }
+  .gmap-china-card.highlight { box-shadow: 0 0 0 2px var(--accent-2), 0 0 24px rgba(77,157,255,0.45); transform: translateY(-2px); }
+  .gmap-china-card .name { font-weight:700; font-size:14px; }
+  .gmap-china-card .meta { font-size: 11.5px; color: var(--text-faint); margin-top:4px; }
+</style>
+</head>
+<body>
+<div id="topbar"></div>
+
+<div class="container section">
+  <h1 class="section-title">全球科技地图 Global Tech Map</h1>
+  <p class="section-sub">先建立"美国 / 台湾 / 韩国 → 中国"的技术流向认知，再判断估值是否合理。点击左侧任意海外公司，右下方会高亮对应的中国标的。</p>
+</div>
+
+<div class="container section">
+  <div class="panel">
+    <div class="gmap">
+      <div class="gmap-countries" id="gmapCountries"></div>
+      <div class="gmap-flow">↓<small>技术流向 / 国产替代方向</small></div>
+      <h3 style="margin:10px 0;">中国</h3>
+      <div class="gmap-china" id="gmapChina"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>行业常见合理 PE 区间（参考）</h3>
+    <p class="section-sub">不同赛道成熟阶段的估值中枢差异很大，不能用同一把PE尺子衡量所有公司。以下为示例区间，仅供参考。</p>
+    <table class="data-table">
+      <thead><tr><th>行业</th><th>常见合理PE（成熟阶段）</th></tr></thead>
+      <tbody>
+        <tr><td>AI芯片 / AI软件</td><td>60~150倍（高成长期弹性极大）</td></tr>
+        <tr><td>半导体设备</td><td>50~80倍</td></tr>
+        <tr><td>晶圆代工/制造</td><td>25~45倍</td></tr>
+        <tr><td>DRAM/存储</td><td>15~35倍（强周期，波动大）</td></tr>
+        <tr><td>AI光模块/光通信</td><td>25~70倍（受景气周期影响较大）</td></tr>
+        <tr><td>动力电池</td><td>15~35倍</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="footer"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/live-refresh.js"></script>
+<script src="assets/common.js"></script>
+<script src="assets/app-global.js"></script>
+</body>
+</html>
