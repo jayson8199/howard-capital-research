@@ -963,6 +963,490 @@ const COMPANIES = [
       { year: "2024", event: "存储测试设备通过客户验证" },
       { year: "2026（送样中）", event: "逻辑芯片检测设备客户送样" }
     ]
+  },
+  {
+    code: "688072",
+    name: "拓荆科技",
+    industry: "半导体设备",
+    mainBusiness: "国产薄膜沉积（PECVD/ALD等）设备龙头，是国产存储/逻辑晶圆厂扩产的核心薄膜设备供应商，受益于AI芯片及先进封装扩产。",
+    globalBenchmark: "应用材料（Applied Materials）、泛林集团（Lam Research）",
+    domesticReplacementRate: "★★★★☆（薄膜沉积设备国产化率快速提升）",
+    nationalStrategyLevel: "国家战略级（半导体设备自主可控）",
+    listingStatus: "listed",
+    exchange: "科创板",
+    shareClass: "A股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "全部A股",
+    marketFact: {
+      price: 690.65,
+      totalShares: 2.91,
+      floatShares: 2.83,
+      calculatedMarketCap: null,
+      reportedMarketCap: 2007.57,
+      marketCapMethod: "最新收盘价 × 总股本",
+      peTTM: 87.96,
+      pb: 17.11,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 790,
+      safe: 1070,
+      reasonable: 1575,
+      optimistic: 2205,
+      bubble: 2915,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 24,
+      reasonablePELow: 55,
+      reasonablePEHigh: 70,
+      baseFairValue: 1500,
+      adjustmentFactor: 1.05,
+      adjustedFairValue: 1575,
+      anchorExplanation: "机构一致预期2027年归母净利润约24亿元（2026年预期约17亿元，同比+83%），给予55~70倍合理PE（薄膜沉积设备细分龙头，对标半导体设备平台型溢价），基准合理市值约1500亿元；因其在国产薄膜沉积设备中的稀缺地位，给予1.05倍溢价，调整后合理市值约1575亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 19, maxScore: 20, reason: "国产薄膜沉积设备渗透率仍在快速提升。" },
+      { name: "竞争壁垒", score: 16, maxScore: 20, reason: "细分领域领先，但综合平台化程度不及龙头设备厂。" },
+      { name: "成长性", score: 19, maxScore: 20, reason: "订单饱满，2026年利润预计同比大增。" },
+      { name: "估值", score: 11, maxScore: 20, reason: "当前市值已高于合理锚测算区间，估值透支较多。" },
+      { name: "技术趋势", score: 17, maxScore: 20, reason: "先进封装/HBM相关薄膜设备验证持续推进。" }
+    ],
+    catalysts: [
+      "晶圆厂扩产订单超预期",
+      "先进封装/HBM相关设备验证突破",
+      "国产化率进一步提升",
+      "新产品品类拓展"
+    ],
+    risks: [
+      "下游晶圆厂资本开支周期性波动",
+      "估值已计入较高成长预期，业绩波动放大股价回撤",
+      "核心零部件仍依赖进口",
+      "行业竞争加剧毛利率承压"
+    ],
+    research: {
+      oneLiner: "国产薄膜沉积设备龙头，半导体设备国产化的核心受益标的之一。",
+      whyNotHigher: "当前市值已明显高于按2027年预测利润测算的合理估值区间，且薄膜沉积设备市场竞争者增多，需要业绩持续超预期兑现才能消化估值。",
+      sellTriggers: "晶圆厂资本开支大幅放缓、新增订单不及预期、或市值长期停留在乐观区之上而无业绩验证。"
+    },
+    thesis: [
+      "国产薄膜沉积设备核心供应商，受益晶圆厂扩产",
+      "AI芯片/先进封装打开新成长空间",
+      "国产化率仍有提升空间",
+      "行业高景气持续兑现业绩"
+    ],
+    timeline: [
+      { year: "2010", event: "公司成立，专注PECVD/ALD设备研发" },
+      { year: "2022", event: "科创板上市" },
+      { year: "2025", event: "营收利润高速增长，订单饱满" },
+      { year: "2026-2027（预期）", event: "先进封装/HBM相关设备验证与放量" }
+    ]
+  },
+  {
+    code: "300394",
+    name: "天孚通信",
+    industry: "AI光模块",
+    mainBusiness: "全球领先的光通信无源器件与光引擎供应商，深度绑定海内外AI服务器/光模块龙头客户，是AI算力光通信产业链核心供应商。",
+    globalBenchmark: "Coherent、Lumentum",
+    domesticReplacementRate: "★★★★★（全球光引擎/无源器件龙头供应商之一）",
+    nationalStrategyLevel: "产业链核心资产（AI算力光通信关键供应商）",
+    listingStatus: "listed",
+    exchange: "深交所创业板",
+    shareClass: "A股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "全部A股",
+    marketFact: {
+      price: 230.68,
+      totalShares: 10.91,
+      floatShares: 10.88,
+      calculatedMarketCap: null,
+      reportedMarketCap: 2516.32,
+      marketCapMethod: "最新收盘价 × 总股本",
+      peTTM: 127.80,
+      pb: 46.03,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 1100,
+      safe: 1535,
+      reasonable: 2195,
+      optimistic: 3075,
+      bubble: 4060,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 42,
+      reasonablePELow: 40,
+      reasonablePEHigh: 55,
+      baseFairValue: 1995,
+      adjustmentFactor: 1.1,
+      adjustedFairValue: 2195,
+      anchorExplanation: "机构一致预期2027年归母净利润约42亿元（2026年预期约33.5亿元，同比+66%），给予40~55倍合理PE（AI算力光通信核心供应商，对标全球光模块龙头估值），基准合理市值约1995亿元；因其全球光引擎/无源器件龙头地位，给予1.1倍溢价，调整后合理市值约2195亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 20, maxScore: 20, reason: "AI算力光通信需求持续爆发。" },
+      { name: "竞争壁垒", score: 18, maxScore: 20, reason: "光引擎/无源器件领先地位，客户粘性高。" },
+      { name: "成长性", score: 19, maxScore: 20, reason: "受益800G/1.6T光模块放量，业绩高速增长。" },
+      { name: "估值", score: 12, maxScore: 20, reason: "估值已较高，price in较多乐观预期。" },
+      { name: "技术趋势", score: 18, maxScore: 20, reason: "硅光/CPO等前沿技术布局领先。" }
+    ],
+    catalysts: [
+      "800G/1.6T光模块加速放量",
+      "硅光/CPO技术布局兑现",
+      "海外AI资本开支持续超预期",
+      "新客户/新产品导入"
+    ],
+    risks: [
+      "估值已充分反映高成长预期，业绩不及预期回撤风险大",
+      "海外大客户集中度较高",
+      "光模块行业技术迭代快，竞争加剧",
+      "中美贸易/出口管制不确定性"
+    ],
+    research: {
+      oneLiner: "全球AI光通信核心供应商，深度绑定海内外光模块龙头客户的稀缺光引擎/无源器件龙头。",
+      whyNotHigher: "当前市值处于按2027年预测利润测算的乐观区间，AI算力光通信赛道估值已较为充分，需要持续的订单和技术验证才能维持高倍数。",
+      sellTriggers: "AI资本开支或光模块出货增速明显放缓、核心客户份额流失、或市值长期显著高于乐观锚而无新业绩驱动。"
+    },
+    thesis: [
+      "全球领先的光引擎与无源器件供应商，深度绑定AI算力产业链",
+      "800G/1.6T光模块放量驱动业绩高增长",
+      "硅光/CPO前沿布局打开长期空间",
+      "海内外双重客户结构分散风险"
+    ],
+    timeline: [
+      { year: "2013", event: "公司成立" },
+      { year: "2017", event: "深交所创业板上市" },
+      { year: "2023-2025", event: "受益AI算力光模块需求爆发，业绩快速增长" },
+      { year: "2026-2027（预期）", event: "800G/1.6T及硅光/CPO产品持续放量" }
+    ]
+  },
+  {
+    code: "002028",
+    name: "思源电气",
+    industry: "电网设备",
+    mainBusiness: "国内领先的输变电一次设备及电网智能化解决方案供应商，海外业务快速放量，受益全球电网升级与特高压建设。",
+    globalBenchmark: "施耐德电气（Schneider Electric）、伊顿（Eaton）",
+    domesticReplacementRate: "★★★★☆（国产电网设备出海龙头之一）",
+    nationalStrategyLevel: "国家战略级（电网设备自主可控+出海）",
+    listingStatus: "listed",
+    exchange: "上交所",
+    shareClass: "A股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "全部A股",
+    marketFact: {
+      price: 161.40,
+      totalShares: 7.83,
+      floatShares: 6.11,
+      calculatedMarketCap: null,
+      reportedMarketCap: 1263.07,
+      marketCapMethod: "最新收盘价 × 总股本",
+      peTTM: 42.47,
+      pb: 7.67,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 930,
+      safe: 1225,
+      reasonable: 1855,
+      optimistic: 2600,
+      bubble: 3435,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 62,
+      reasonablePELow: 25,
+      reasonablePEHigh: 32,
+      baseFairValue: 1767,
+      adjustmentFactor: 1.05,
+      adjustedFairValue: 1855,
+      anchorExplanation: "机构一致预期2027年归母净利润约62亿元（2025年实际31.5亿元，同比+53.7%），给予25~32倍合理PE（电网设备出海高成长龙头），基准合理市值约1767亿元；因海外业务快速放量打开第二增长曲线，给予1.05倍溢价，调整后合理市值约1855亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 18, maxScore: 20, reason: "全球电网升级+海外市场空间广阔。" },
+      { name: "竞争壁垒", score: 17, maxScore: 20, reason: "产品线齐全，海外认证壁垒较高。" },
+      { name: "成长性", score: 19, maxScore: 20, reason: "海外业务高速放量，收入利润连续高增长。" },
+      { name: "估值", score: 16, maxScore: 20, reason: "当前估值相对合理，安全边际较高。" },
+      { name: "技术趋势", score: 16, maxScore: 20, reason: "电网智能化、特高压设备持续升级。" }
+    ],
+    catalysts: [
+      "海外订单持续超预期",
+      "国内特高压招标落地",
+      "新兴市场电网升级需求释放",
+      "新能源配套电网设备需求增长"
+    ],
+    risks: [
+      "海外业务受地缘政治/贸易政策影响",
+      "原材料价格波动影响毛利率",
+      "国内电网招标节奏波动",
+      "汇率波动影响海外业务利润"
+    ],
+    research: {
+      oneLiner: "国产电网设备出海龙头，受益全球电网升级与特高压建设的稀缺高成长标的。",
+      whyNotHigher: "海外业务占比持续提升带来汇率和地缘政治不确定性，且电网设备行业招标节奏存在波动，市场对持续高增长的可持续性仍有观察期。",
+      sellTriggers: "海外订单增速大幅放缓、国内电网招标不及预期、或毛利率因原材料成本大幅承压。"
+    },
+    thesis: [
+      "国产电网设备出海龙头，受益全球电网升级周期",
+      "特高压+新能源配套需求驱动国内业务稳健增长",
+      "海外市场空间广阔，收入占比持续提升",
+      "估值相对合理，安全边际较高"
+    ],
+    timeline: [
+      { year: "1993", event: "公司成立" },
+      { year: "2010", event: "上交所上市" },
+      { year: "2020-2024", event: "海外业务快速拓展" },
+      { year: "2025", event: "营收215.39亿元(+39.34%)，净利润31.50亿元(+53.74%)" },
+      { year: "2026-2027（预期）", event: "海外业务持续放量，特高压招标落地" }
+    ]
+  },
+  {
+    code: "600406",
+    name: "国电南瑞",
+    industry: "电网设备",
+    mainBusiness: "国家电网旗下电网自动化与智能化龙头，产品覆盖电网调度、继电保护、特高压直流输电控制等核心领域。",
+    globalBenchmark: "西门子能源（Siemens Energy）、ABB",
+    domesticReplacementRate: "★★★★★（国内电网自动化绝对龙头）",
+    nationalStrategyLevel: "国家战略级（电网安全核心资产，国家电网旗下）",
+    listingStatus: "listed",
+    exchange: "上交所",
+    shareClass: "A股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "全部A股",
+    marketFact: {
+      price: 24.12,
+      totalShares: 80.32,
+      floatShares: 80.08,
+      calculatedMarketCap: null,
+      reportedMarketCap: 1937.26,
+      marketCapMethod: "最新收盘价 × 总股本",
+      peTTM: 67.15,
+      pb: 3.90,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 1150,
+      safe: 1650,
+      reasonable: 2293,
+      optimistic: 3095,
+      bubble: 4015,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 104,
+      reasonablePELow: 18,
+      reasonablePEHigh: 24,
+      baseFairValue: 2184,
+      adjustmentFactor: 1.05,
+      adjustedFairValue: 2293,
+      anchorExplanation: "多家机构一致预期2027年归母净利润约103~104亿元（同比+12%左右），给予18~24倍合理PE（国家电网旗下电网自动化绝对龙头，业绩稳健），基准合理市值约2184亿元；因十五五电网投资及海外业务起量，给予1.05倍溢价，调整后合理市值约2293亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 18, maxScore: 20, reason: "十五五电网投资持续增长。" },
+      { name: "竞争壁垒", score: 19, maxScore: 20, reason: "国家电网旗下，行业绝对龙头地位。" },
+      { name: "成长性", score: 15, maxScore: 20, reason: "增速相对稳健，不属于爆发式增长。" },
+      { name: "估值", score: 15, maxScore: 20, reason: "估值处于合理区间。" },
+      { name: "技术趋势", score: 16, maxScore: 20, reason: "特高压+电网智能化持续升级。" }
+    ],
+    catalysts: [
+      "特高压直流招标加速落地",
+      "海外业务快速起量",
+      "十五五电网投资规划落地",
+      "电网数字化/智能化升级需求"
+    ],
+    risks: [
+      "电网投资节奏受宏观政策影响",
+      "海外业务拓展仍处早期，规模有限",
+      "行业增速相对稳健，缺乏爆发性催化",
+      "原材料及人工成本上升压制利润率"
+    ],
+    research: {
+      oneLiner: "国家电网旗下电网自动化绝对龙头，受益十五五电网投资与特高压建设的稳健增长标的。",
+      whyNotHigher: "作为大市值稳健增长的电网设备龙头，业绩增速相对稳健而非爆发式增长，市场给予的估值弹性有限。",
+      sellTriggers: "电网投资大幅低于十五五规划预期、特高压招标进度显著放缓、或海外业务拓展不及预期。"
+    },
+    thesis: [
+      "国家电网旗下电网自动化绝对龙头，受益十五五电网投资周期",
+      "特高压直流建设持续拉动核心设备需求",
+      "海外业务快速起量打开第二增长曲线",
+      "国企背景+行业地位提供确定性"
+    ],
+    timeline: [
+      { year: "2003", event: "公司成立" },
+      { year: "2010", event: "上交所上市" },
+      { year: "2021-2025", event: "持续受益电网数字化升级" },
+      { year: "2026", event: "海外业务快速起量，一季报业绩稳健增长" },
+      { year: "2026-2027（预期）", event: "十五五电网投资与特高压招标持续落地" }
+    ]
+  },
+  {
+    code: "603259",
+    name: "药明康德",
+    industry: "创新药CXO",
+    mainBusiness: "全球领先的医药研发生产一体化服务平台（CRDMO），覆盖药物发现、临床前研究、临床试验及商业化生产全流程外包服务。",
+    globalBenchmark: "龙沙（Lonza）、Catalent、IQVIA",
+    domesticReplacementRate: "★★★★★（全球CXO行业中国龙头）",
+    nationalStrategyLevel: "产业链核心资产（全球医药外包龙头，创新药产业基础设施）",
+    listingStatus: "listed",
+    exchange: "上交所 / 港交所",
+    shareClass: "A+H股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "A股口径（本页仅展示A股）",
+    marketFact: {
+      price: 154.82,
+      totalShares: 29.84,
+      floatShares: 24.73,
+      calculatedMarketCap: null,
+      reportedMarketCap: 4619.45,
+      marketCapMethod: "最新收盘价 × A股总股本",
+      peTTM: 20.85,
+      pb: 5.54,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "A+H两地上市，本站仅统一展示A股口径。总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 1835,
+      safe: 2565,
+      reasonable: 3666,
+      optimistic: 5130,
+      bubble: 6780,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 155,
+      reasonablePELow: 18,
+      reasonablePEHigh: 25,
+      baseFairValue: 3332.5,
+      adjustmentFactor: 1.1,
+      adjustedFairValue: 3666,
+      anchorExplanation: "机构一致预期2027年归母净利润约155亿元（2026年H1已实现110.8亿元，同比+29.4%，全年指引大幅上调），给予18~25倍合理PE（全球CRDMO龙头，对标Lonza/Catalent），基准合理市值约3332亿元；因全球CXO龙头地位及业绩复苏兑现，给予1.1倍溢价，调整后合理市值约3666亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 19, maxScore: 20, reason: "全球创新药研发外包需求持续增长。" },
+      { name: "竞争壁垒", score: 19, maxScore: 20, reason: "一体化CRDMO平台+规模+客户粘性深厚。" },
+      { name: "成长性", score: 18, maxScore: 20, reason: "业绩指引大幅上调，订单/收入加速增长。" },
+      { name: "估值", score: 13, maxScore: 20, reason: "估值已修复至乐观区间，price in较多复苏预期。" },
+      { name: "技术趋势", score: 16, maxScore: 20, reason: "新分子类型(TIDES/ADC等)平台持续拓展。" }
+    ],
+    catalysts: [
+      "2026年业绩指引持续上调",
+      "海外生物医药投融资回暖",
+      "新分子类型(TIDES/ADC等)订单放量",
+      "地缘政治风险边际缓解"
+    ],
+    risks: [
+      "地缘政治/美国生物安全相关立法风险",
+      "海外大客户订单波动",
+      "行业估值已较大幅修复，透支部分预期",
+      "汇率波动影响海外收入"
+    ],
+    research: {
+      oneLiner: "全球CXO龙头，业绩指引大幅上调验证复苏兑现的核心资产。",
+      whyNotHigher: "市值已明显高于按2027年预测利润测算的合理估值区间，反映市场对业绩复苏与指引上调的price in，需要持续超预期兑现才能维持高倍数。",
+      sellTriggers: "地缘政治风险再度升级、海外订单增速明显放缓、或业绩不及已上调的指引。"
+    },
+    thesis: [
+      "全球CRDMO一体化平台龙头，客户粘性与规模壁垒深厚",
+      "2026年业绩指引大幅上调，验证复苏趋势",
+      "新分子类型业务打开第二增长曲线",
+      "地缘政治风险边际缓解，估值修复空间"
+    ],
+    timeline: [
+      { year: "2000", event: "公司成立" },
+      { year: "2018", event: "A股上市（2021年H股上市）" },
+      { year: "2023-2024", event: "受地缘政治及行业周期影响，估值大幅回调" },
+      { year: "2026H1", event: "营收288.97亿元(+38.93%)，净利润110.8亿元(+29.43%)" },
+      { year: "2026", event: "全面上调2026年业绩指引至585-605亿元收入" }
+    ]
+  },
+  {
+    code: "688019",
+    name: "安集科技",
+    industry: "半导体材料",
+    mainBusiness: "国产CMP抛光液及光刻胶去除剂龙头，是集成电路制造关键耗材国产化的核心供应商。",
+    globalBenchmark: "卡博特微电子（CMC Materials，现属Entegris）、陶氏（Dow）",
+    domesticReplacementRate: "★★★★☆（CMP抛光液国产化率持续提升）",
+    nationalStrategyLevel: "国家战略级（半导体关键材料自主可控）",
+    listingStatus: "listed",
+    exchange: "科创板",
+    shareClass: "A股",
+    currency: "CNY",
+    valuationType: "ListedMarketCap",
+    marketCapScope: "全部A股",
+    marketFact: {
+      price: 251.68,
+      totalShares: 2.28,
+      floatShares: 2.28,
+      calculatedMarketCap: null,
+      reportedMarketCap: 574.73,
+      marketCapMethod: "最新收盘价 × 总股本",
+      peTTM: 69.19,
+      pb: 12.66,
+      asOfDate: "2026-08-07",
+      sourceName: "东方财富（push2 API，延迟行情）",
+      sourceUrl: "https://push2.eastmoney.com/",
+      sourceNote: "总股本/PE/PB为东方财富接口数据整理，未逐一交叉核实，仅供参考。"
+    },
+    anchors: {
+      excellent: 400,
+      safe: 550,
+      reasonable: 833,
+      optimistic: 1170,
+      bubble: 1545,
+      forecastProfitYear: 2027,
+      forecastNetProfit: 12.7,
+      reasonablePELow: 55,
+      reasonablePEHigh: 70,
+      baseFairValue: 793.75,
+      adjustmentFactor: 1.05,
+      adjustedFairValue: 833,
+      anchorExplanation: "机构一致预期2027年归母净利润约12.7亿元（2025-2027年复合高速增长），给予55~70倍合理PE（对标半导体材料稀缺国产替代标的），基准合理市值约794亿元；因其CMP抛光液国产龙头稀缺地位，给予1.05倍溢价，调整后合理市值约833亿元。"
+    },
+    scores: [
+      { name: "行业空间", score: 18, maxScore: 20, reason: "CMP材料国产化空间较大。" },
+      { name: "竞争壁垒", score: 17, maxScore: 20, reason: "技术壁垒高，客户认证周期长形成护城河。" },
+      { name: "成长性", score: 18, maxScore: 20, reason: "营收净利润持续高速增长。" },
+      { name: "估值", score: 15, maxScore: 20, reason: "估值处于相对合理区间，安全边际尚可。" },
+      { name: "技术趋势", score: 16, maxScore: 20, reason: "产品品类持续拓展，先进制程材料验证推进。" }
+    ],
+    catalysts: [
+      "先进制程CMP材料验证突破",
+      "产品品类持续拓展(光刻胶去除剂等)",
+      "晶圆厂扩产带来材料需求增长",
+      "国产化率进一步提升"
+    ],
+    risks: [
+      "应收账款体量较大，现金流压力",
+      "客户集中度较高",
+      "核心原材料仍部分依赖进口",
+      "行业竞争加剧毛利率承压"
+    ],
+    research: {
+      oneLiner: "国产CMP抛光液龙头，半导体关键材料国产化的稀缺标的。",
+      whyNotHigher: "应收账款体量较大反映下游晶圆厂回款周期长，且客户集中度较高，市场对现金流质量与产品品类拓展速度仍有观察期。",
+      sellTriggers: "应收账款持续大幅攀升侵蚀现金流、核心客户订单流失、或市值长期显著高于乐观锚而无新品类验证。"
+    },
+    thesis: [
+      "国产CMP抛光液绝对龙头，半导体关键材料自主可控核心受益标的",
+      "产品品类持续拓展打开成长空间",
+      "晶圆厂扩产带来材料需求确定性增长",
+      "当前估值处于相对合理区间，安全边际尚可"
+    ],
+    timeline: [
+      { year: "2004", event: "公司成立" },
+      { year: "2019", event: "科创板上市" },
+      { year: "2022-2025", event: "营收净利润持续高速增长" },
+      { year: "2026Q1", event: "净利润2.08亿元，同比增长23.01%" },
+      { year: "2026-2027（预期）", event: "先进制程材料验证与新品类放量" }
+    ]
   }
 ];
 
@@ -989,7 +1473,12 @@ const INDUSTRY_TREE = [
       {
         name: "半导体设备",
         globalPeers: ["Applied Materials", "Lam Research", "荏原制作所"],
-        codes: ["002371", "688012", "688120", "300567"]
+        codes: ["002371", "688012", "688120", "300567", "688072"]
+      },
+      {
+        name: "半导体材料",
+        globalPeers: ["Entegris（CMC Materials）", "陶氏 Dow"],
+        codes: ["688019"]
       },
       {
         name: "晶圆代工",
@@ -999,7 +1488,7 @@ const INDUSTRY_TREE = [
       {
         name: "AI光模块 / 光通信",
         globalPeers: ["Coherent", "Lumentum"],
-        codes: ["300308", "300502"]
+        codes: ["300308", "300502", "300394"]
       },
       {
         name: "AI服务器",
@@ -1015,6 +1504,26 @@ const INDUSTRY_TREE = [
         name: "动力电池 / 储能",
         globalPeers: ["LG新能源", "三星SDI", "松下"],
         codes: ["300750"]
+      }
+    ]
+  },
+  {
+    name: "电网设备",
+    children: [
+      {
+        name: "电网自动化 / 输变电设备",
+        globalPeers: ["西门子能源", "ABB", "施耐德电气"],
+        codes: ["002028", "600406"]
+      }
+    ]
+  },
+  {
+    name: "创新药 CXO",
+    children: [
+      {
+        name: "医药研发生产外包（CRDMO）",
+        globalPeers: ["龙沙 Lonza", "Catalent", "IQVIA"],
+        codes: ["603259"]
       }
     ]
   }
@@ -1036,9 +1545,10 @@ const GLOBAL_MAP = {
         { name: "Broadcom", segment: "AI芯片/网络", relatedCodes: ["688256"] },
         { name: "Applied Materials", segment: "半导体设备", relatedCodes: ["002371"] },
         { name: "Lam Research", segment: "刻蚀设备", relatedCodes: ["688012"] },
-        { name: "Coherent", segment: "光模块", relatedCodes: ["300308"] },
-        { name: "Lumentum", segment: "光模块", relatedCodes: ["300502"] },
-        { name: "Super Micro", segment: "AI服务器", relatedCodes: ["601138"] }
+        { name: "Coherent", segment: "光模块", relatedCodes: ["300308", "300394"] },
+        { name: "Lumentum", segment: "光模块", relatedCodes: ["300502", "300394"] },
+        { name: "Super Micro", segment: "AI服务器", relatedCodes: ["601138"] },
+        { name: "Entegris（CMC Materials）", segment: "半导体材料(CMP抛光液)", relatedCodes: ["688019"] }
       ]
     },
     {
@@ -1055,11 +1565,21 @@ const GLOBAL_MAP = {
         { name: "LG新能源", segment: "动力电池", relatedCodes: ["300750"] },
         { name: "三星SDI", segment: "动力电池", relatedCodes: ["300750"] }
       ]
+    },
+    {
+      country: "欧洲",
+      companies: [
+        { name: "西门子能源 Siemens Energy", segment: "电网设备", relatedCodes: ["600406", "002028"] },
+        { name: "ABB", segment: "电网设备", relatedCodes: ["600406", "002028"] },
+        { name: "施耐德电气 Schneider Electric", segment: "电网设备", relatedCodes: ["002028"] },
+        { name: "龙沙 Lonza", segment: "医药合同研发生产(CDMO)", relatedCodes: ["603259"] }
+      ]
     }
   ],
   china: [
     "688825", "688981", "002371", "688012", "688041", "688256",
-    "300308", "300502", "601138", "300750", "688120", "300567"
+    "300308", "300502", "601138", "300750", "688120", "300567",
+    "688072", "300394", "002028", "600406", "603259", "688019"
   ]
 };
 
