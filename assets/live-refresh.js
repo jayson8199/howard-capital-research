@@ -14,50 +14,56 @@
 (function () {
   var RELOAD_FLAG = "hcr_live_refresh_reloaded_v1";
 
-  function safeGetLivePrice(code) {
-    try {
-      return typeof getLivePrice === "function" ? getLivePrice(code) : null;
-    } catch (e) {
-      return null;
-    }
-  }
+ function safeGetLivePrice(code) {
+   try {
+     return typeof getLivePrice === "function" ? getLivePrice(code) : null;
+   } catch (e) {
+     return null;
+   }
+ }
 
-  fetch("/.netlify/functions/get-quotes", { cache: "no-store" })
-    .then(function (res) {
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return res.json();
-    })
-    .then(function (payload) {
-      if (!payload || !payload.ok || !payload.prices) return;
-      var changed = false;
+ fetch("/.netlify/functions/get-quotes", { cache: "no-store" })
+  .then(function (res) {
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return res.json();
+  })
+  .then(function (payload) {
+    if (!payload || !payload.ok || !payload.prices) return;
+    var changed = false;
 
-      Object.keys(payload.prices).forEach(function (code) {
-        var p = payload.prices[code];
-        if (!p || !p.price) return;
-        var existing = safeGetLivePrice(code);
-        // 尊重用户手动输入的价格，不静默覆盖
-        if (existing && existing.source === "manual") return;
-        // 已经是同一次自动抓取的结果，不用重复处理
-        if (existing && existing.source === "eastmoney-auto" && existing.price === p.price) return;
+        try {
+          var metaEl = document.getElementById("topbarMeta");
+          if (metaEl && payload.updatedAt) {
+            var d = new Date(payload.updatedAt);
+            var stamp = d.toLocaleString("zh-CN", { hour12: false });
+            metaEl.innerHTML = "行情最后自动刷新：" + stamp + "（东方财富，工作日收盘后自动更新）";
+          }
+        } catch (e) {}
 
-        if (typeof setLivePrice === "function") {
-          setLivePrice(code, p.price, "eastmoney-auto");
-          changed = true;
+        Object.keys(payload.prices).forEach(function (code) {
+          var p = payload.prices[code];
+          if (!p || !p.price) return;
+          var existing = safeGetLivePrice(code);
+          if (existing && existing.source === "manual") return;
+          if (existing && existing.source === "eastmoney-auto" && existing.price === p.price) return;
+
+                                            if (typeof setLivePrice === "function") {
+                                              setLivePrice(code, p.price, "eastmoney-auto");
+                                              changed = true;
+                                            }
+        });
+
+        if (changed) {
+          var already = false;
+          try { already = sessionStorage.getItem(RELOAD_FLAG) === "1"; } catch (e) {}
+          if (!already) {
+            try { sessionStorage.setItem(RELOAD_FLAG, "1"); } catch (e) {}
+            location.reload();
+          } else if (typeof refreshEnrichedData === "function") {
+            refreshEnrichedData();
+          }
         }
-      });
-
-      if (changed) {
-        var already = false;
-        try { already = sessionStorage.getItem(RELOAD_FLAG) === "1"; } catch (e) {}
-        if (!already) {
-          try { sessionStorage.setItem(RELOAD_FLAG, "1"); } catch (e) {}
-          location.reload();
-        } else if (typeof refreshEnrichedData === "function") {
-          refreshEnrichedData();
-        }
-      }
-    })
-    .catch(function () {
-      /* 静默失败：网络问题、云函数还没首次执行等情况，都不影响页面正常展示 */
-    });
+  })
+  .catch(function () {
+  });
 })();
